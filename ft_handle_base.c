@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 17:26:29 by graja             #+#    #+#             */
-/*   Updated: 2021/07/02 16:32:11 by graja            ###   ########.fr       */
+/*   Updated: 2021/07/02 16:34:32 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_getstr(int nbr, t_flags *flags)
 {
 	char	*str;
 
-	str = '\0';
+	str = NULL;
 	if (flags->type == 'X')
 		str = ft_int2base(nbr, 16, "0123456789ABCDEF");
 	else if (flags->type == 'x')
