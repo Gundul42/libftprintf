@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 11:52:48 by graja             #+#    #+#             */
-/*   Updated: 2021/07/02 12:35:48 by graja            ###   ########.fr       */
+/*   Updated: 2021/07/02 16:27:47 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_add_sign(char *str, t_flags *flags)
 {
 	char	*new;
 
+	new = NULL;
 	if (flags->sign == 0)
 		return (str);
 	else if (flags->sign < 0)
