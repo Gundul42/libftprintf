@@ -6,29 +6,19 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 17:14:22 by graja             #+#    #+#             */
-/*   Updated: 2021/07/02 12:14:51 by graja            ###   ########.fr       */
+/*   Updated: 2021/07/02 17:06:33 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static
-int	ft_nullornot(t_flags *flags)
-{
-	if (!flags->max && !flags->width)
-		return (1);
-	if ((!flags->max || flags->max > 5) && (!flags->width \
-				|| flags->width > 1))
-		return (1);
-	return (0);
-}
 
 static
 char	*ft_makestr(char *str, int len, t_flags *flags)
 {
 	char	*ptr;
 
-	if (!str && ft_nullornot(flags))
+	if (!str) 
 	{
 		str = "(null)";
 		len = ft_strlen(str);
