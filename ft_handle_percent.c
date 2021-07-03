@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 14:38:47 by graja             #+#    #+#             */
-/*   Updated: 2021/07/03 10:42:29 by graja            ###   ########.fr       */
+/*   Updated: 2021/07/03 11:06:21 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ const char	*ft_handle_percent(const char *ptr, t_flags *flags)
 	char	*str;
 
 	str = ft_strjoin("%", "");
-	if (flags->zero > 0 && !flags->minus)
+	if (flags->zero > 0 && !flags->minus && !flags->max)
 		str = ft_add_zero_front(str, flags->width);
-	if (flags->max)
+	if (flags->max && !flags->width)
 		str = ft_add_zero_front(str, flags->max);
-	if (flags->width)
+	if (flags->width && !flags->max)
 		str = ft_add_spaces(str, flags);
 	write(1, str, ft_strlen(str));
-	ptr += 1;
+	ptr++;
 	flags->length += ft_strlen(str);
 	free(str);
 	return (ptr);
