@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 17:14:22 by graja             #+#    #+#             */
-/*   Updated: 2021/07/02 15:04:08 by graja            ###   ########.fr       */
+/*   Updated: 2021/07/03 12:30:30 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	ft_handle_pointer(t_flags *flags)
 	str = ft_getptr_adr(src);
 	if (!str)
 		return ;
-	if (!ft_strncmp(str, "0x", 3))
+	if (!ft_strncmp(str, "0x", 3) && !flags->point)
 	{
 		free(str);
 		str = ft_strjoin("0x0", "");
