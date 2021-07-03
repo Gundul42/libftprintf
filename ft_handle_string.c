@@ -6,19 +6,18 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 17:14:22 by graja             #+#    #+#             */
-/*   Updated: 2021/07/02 17:06:33 by graja            ###   ########.fr       */
+/*   Updated: 2021/07/02 17:11:21 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-
 
 static
 char	*ft_makestr(char *str, int len, t_flags *flags)
 {
 	char	*ptr;
 
-	if (!str) 
+	if (!str)
 	{
 		str = "(null)";
 		len = ft_strlen(str);

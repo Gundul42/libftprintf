@@ -6,7 +6,7 @@
 #    By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 13:21:37 by graja             #+#    #+#              #
-#    Updated: 2021/07/02 12:55:27 by graja            ###   ########.fr        #
+#    Updated: 2021/07/03 13:59:13 by graja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,3 +44,6 @@ clean :
 	make clean -C $(LIBFT)
 
 re : fclean all
+
+bonus : fclean
+	echo '>>> NO BONUS AVAILABLE <<<'
